@@ -13,6 +13,7 @@
     var(--color-secondary-2)
   );
   --border-radius: 10px;
+  --input-padding: 0.5rem 1rem 0.5rem 0.2rem;
 }
 
 *,
@@ -84,6 +85,13 @@ label {
 }
 form input[type="radio"]:checked + label .radio__placeholder::after {
   opacity: 1;
+}
+.select {
+  width: 40%;
+}
+input[type="checkbox"] {
+  width: calc(20px * var(--scale));
+  height: calc(20px * var(--scale));
 }
 input[type="email"] {
   width: 60%;
