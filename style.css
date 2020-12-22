@@ -1,0 +1,106 @@
+:root {
+  --color-primary: #55c57a;
+  --color-white: #fff;
+  --color-secondary-1: #4b9fde;
+  --color-secondary-2: #6ec3a4;
+  --spacing-input: 0.3rem;
+  --spacing: 0.5rem;
+  --scale: 1;
+  --spacing-big: 2rem;
+  --linear-gradient: linear-gradient(
+    to right,
+    var(--color-secondary-1),
+    var(--color-secondary-2)
+  );
+  --border: ;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+
+form {
+  background-image: var(--linear-gradient);
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: -0.5rem 0.5rem var(--color-primary);
+  padding: 0 0.5rem;
+}
+form .field {
+  margin-bottom: var(--spacing-big);
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+form .question {
+  font-size: calc(1.5rem * var(--scale));
+  margin-bottom: var(--spacing);
+  font-weight: 600;
+}
+form input[type="radio"] {
+  display: none;
+}
+
+.radio-item,
+.check-item {
+  margin-bottom: var(--spacing);
+}
+label {
+  display: inline-block;
+  font-size: calc(1.2rem * var(--scale));
+  position: relative;
+}
+
+.radio__placeholder {
+  position: relative;
+  display: inline-block;
+  width: calc(20px * var(--scale));
+  height: calc(20px * var(--scale));
+  margin-right: var(--spacing);
+  border: calc(4px * var(--scale)) solid var(--color-white);
+  border-radius: 50%;
+}
+.radio__placeholder::after {
+  content: " ";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+}
+form input[type="radio"]:checked + label .radio__placeholder::after {
+  opacity: 1;
+}
+input[type="email"] {
+  padding: 0.5rem 1rem 0.5rem 0.2rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  margin-top: var(--spacing);
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --scale: 0.9;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --scale: 0.8;
+  }
+  form {
+    width: 90%;
+  }
+}

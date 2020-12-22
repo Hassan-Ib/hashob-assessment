@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
+    <title>hasob assessment</title>
+  </head>
+  <body>
+    <section class="questionnaire">
+      <form action="#">
+        <div class="radio-field field">
+          <p class="question">what is the capital of Chile :</p>
+          <div class="radio-item">
+            <input
+              type="radio"
+              id="somalia"
+              name="state-capital"
+              value="somalia"
+            />
+            <label for="somalia">
+              <span class="radio__placeholder"></span>
+              <span> Somalia </span>
+            </label>
+          </div>
+          <div class="radio-item">
+            <input
+              type="radio"
+              id="santiago"
+              name="state-capital"
+              value="Santiago"
+            />
+            <label for="santiago">
+              <span class="radio__placeholder"></span>
+
+              <span> Santiago </span>
+            </label>
+          </div>
+          <div class="radio-item">
+            <input
+              type="radio"
+              id="uruguay"
+              name="state-capital"
+              value="uruguay"
+            />
+            <label for="uruguay">
+              <span class="radio__placeholder"></span>
+              <span> Uruguay </span>
+            </label>
+          </div>
+
+          <div class="radio-item">
+            <input type="radio" id="abuja" name="state-capital" value="abuja" />
+            <label for="abuja">
+              <span class="radio__placeholder"></span>
+              <span> Abuja </span>
+            </label>
+          </div>
+        </div>
+        <div class="select-field field">
+          <p class="question">what is the largest country in the world :</p>
+          <label for="country">Choose a country</label>
+          <select name="largest-Country" id="country" class="select" required>
+            <option value="">Select from the options</option>
+            <option value="China" data-answer="false">China</option>
+            <option value="Turkey" data-answer="false">Turkey</option>
+            <option value="Russia" data-answer="true">Russia</option>
+            <option value="Nigeria" data-answer="false">Nigeria</option>
+          </select>
+        </div>
+        <div class="check-field field">
+          <p class="question">
+            what is the most important aspect of solvig a problem :
+          </p>
+          <div class="check-item">
+            <label for="breaking">
+              <input
+                type="checkbox"
+                id="breaking"
+                value="Breaking the problem down into small simple solve able bits"
+              />
+              Breaking the problem down into small simple solve able bits
+            </label>
+          </div>
+
+          <div class="check-item">
+            <label for="solving">
+              <input
+                type="checkbox"
+                id="solving it"
+                value="Actually solving the problem"
+              />
+              Actually solving the problem
+            </label>
+          </div>
+          <div class="check-item">
+            <label for="understand">
+              <input
+                type="checkbox"
+                id="understand"
+                value="Understand the problem and make a ton of research about it"
+              />
+              Understand the problem and make tons of research about it
+            </label>
+          </div>
+          <div class="check-item">
+            <label for="hack">
+              <input
+                type="checkbox"
+                id="hack"
+                value="Hack bouch of online solutions together"
+              />
+              Hack bouch of online solutions together</label
+            >
+          </div>
+        </div>
+        <div class="email-field field">
+          <label for="email">Email address</label><br />
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@email.com"
+          />
+        </div>
+        <div class="submit-field">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
