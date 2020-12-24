@@ -106,16 +106,20 @@ const handleSubmit = (e) => {
   if (isAllQuestionAnswered) {
     // Todo 1: get all questions
     const questionAnswer = inputData.map((element) => {
-      // get all question and remove :
+      // get all question and remove coloumn
       const question = element.inputParent
         .querySelector(".question")
         .innerText.slice(0, -1);
 
+      // get answer from each field
       const answersNode = element.inputParent.querySelectorAll(element.input);
-      const answer = [...answersNode].map((answer) => answer.value).join(",");
+      let answer = [...answersNode].map((answer) => answer.value);
+      // if answer from a field is less than 1 return a single string
+      if (answer.length < 2) {
+        answer = answer.join(",");
+      }
       return { question, answer };
     });
-    // console.log(questionAnswer);
     // todo 2: display a message that the form was successfully submited
     const successMessage = `<div class="success-msg form-answer">
                                 <h3>successfully submitted :)</h3>
@@ -133,7 +137,6 @@ const handleSubmit = (e) => {
       document
         .querySelector(".success-msg")
         .insertAdjacentHTML("beforeend", jsonQuestionAnswer);
-      console.log(jsonQuestionAnswer);
     }, 1000);
     // todo 3: display json format of question answer to the screen
   }
