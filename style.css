@@ -13,6 +13,7 @@
     var(--color-secondary-2)
   );
   --border-radius: 10px;
+  --border-radius-input: 5px;
   --input-padding: 0.5rem 1rem 0.5rem 0.2rem;
 }
 
@@ -27,7 +28,8 @@ body {
   font-family: sans-serif;
 }
 
-form {
+form,
+.form-answer {
   background-image: var(--linear-gradient);
   width: 70%;
   margin: 0 auto;
@@ -35,6 +37,7 @@ form {
   padding: 0.5rem 0.5rem;
   margin-top: 3rem;
   border-radius: var(--border-radius);
+  color: var(--color-white);
 }
 form .field {
   margin-bottom: var(--spacing-big);
@@ -46,6 +49,7 @@ form .question {
   font-size: calc(1.5rem * var(--scale));
   margin-bottom: var(--spacing);
   font-weight: 600;
+  letter-spacing: 1px;
 }
 form input[type="radio"] {
   display: none;
@@ -59,6 +63,7 @@ label {
   display: inline-block;
   font-size: calc(1.2rem * var(--scale));
   position: relative;
+  letter-spacing: 1px;
 }
 
 .radio__placeholder {
@@ -87,7 +92,13 @@ form input[type="radio"]:checked + label .radio__placeholder::after {
   opacity: 1;
 }
 .select {
-  width: 40%;
+  width: 50%;
+  padding: var(--input-padding);
+  border: var(--border-radius-input);
+  border-radius: var(--border-radius);
+}
+.select option {
+  font-size: calc(1.2rem * var(--scale));
 }
 input[type="checkbox"] {
   width: calc(20px * var(--scale));
@@ -100,7 +111,41 @@ input[type="email"] {
   border-radius: 5px;
   margin-top: var(--spacing);
 }
-
+.submit-field {
+  text-align: center;
+}
+.submit-button {
+  box-shadow: none;
+  border: none;
+  display: inline-block;
+  font-size: calc(1.2rem * var(--scale));
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: var(--border-radius-input);
+  transition: transform ease 100ms;
+  backface-visibility: hidden;
+}
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 0.5rem rgba(50, 50, 0, 0.4);
+}
+.submit-button:active {
+  transform: translateY(0);
+}
+.alert {
+  color: red;
+  text-align: center;
+}
+.success-msg {
+  width: 70%;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  text-align: center;
+}
+code {
+  font-size: calc(1.2rem * var(--scale));
+}
 @media screen and (max-width: 991px) {
   :root {
     --scale: 0.9;

@@ -9,8 +9,8 @@
   </head>
   <body>
     <section class="questionnaire">
-      <form action="#">
-        <div class="radio-field field">
+      <form action="#" class="form question-form">
+        <div class="radio-field field question-1">
           <p class="question">what is the capital of Chile :</p>
           <div class="radio-item">
             <input
@@ -58,10 +58,10 @@
             </label>
           </div>
         </div>
-        <div class="select-field field">
+        <div class="select-field field question-2">
           <p class="question">what is the largest country in the world :</p>
           <label for="country">Choose a country</label>
-          <select name="largest-Country" id="country" class="select" required>
+          <select name="largest-Country" id="country" class="select">
             <option value="">Select from the options</option>
             <option value="China" data-answer="false">China</option>
             <option value="Turkey" data-answer="false">Turkey</option>
@@ -69,7 +69,7 @@
             <option value="Nigeria" data-answer="false">Nigeria</option>
           </select>
         </div>
-        <div class="check-field field">
+        <div class="check-field field question-3">
           <p class="question">
             what is the most important aspect of solvig a problem :
           </p>
@@ -78,6 +78,7 @@
               <input
                 type="checkbox"
                 id="breaking"
+                name="programming"
                 value="Breaking the problem down into small simple solve able bits"
               />
               Breaking the problem down into small simple solve able bits
@@ -89,6 +90,7 @@
               <input
                 type="checkbox"
                 id="solving it"
+                name="programming"
                 value="Actually solving the problem"
               />
               Actually solving the problem
@@ -99,6 +101,7 @@
               <input
                 type="checkbox"
                 id="understand"
+                name="programming"
                 value="Understand the problem and make a ton of research about it"
               />
               Understand the problem and make tons of research about it
@@ -109,14 +112,18 @@
               <input
                 type="checkbox"
                 id="hack"
+                name="programming"
                 value="Hack bouch of online solutions together"
               />
               Hack bouch of online solutions together</label
             >
           </div>
         </div>
-        <div class="email-field field">
-          <label for="email">Email address</label><br />
+        <div class="email-field field question-4">
+          <label for="email">
+            <p class="question">Your email address :</p>
+          </label>
+          <br />
 
           <input
             type="email"
